@@ -1,0 +1,19 @@
+.item-list {
+  list-style: none;
+  display: grid;
+
+}
+.item-list-user {
+	list-style: none;
+  grid-column: 1fr;
+  grid-gap: 5vh;
+}
+.sub-list {
+  display: grid;
+  margin: 0vh 3vh;
+  padding-bottom: 2vh;
+  grid-column: 1fr;
+  grid-gap: 20px;
+  font-size: 0.85rem;
+  width: 45vw;
+}

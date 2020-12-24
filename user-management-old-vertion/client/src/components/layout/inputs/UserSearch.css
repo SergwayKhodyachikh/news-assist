@@ -1,0 +1,36 @@
+.users-panel {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: sticky;
+}
+
+
+#search-value {
+  height: 35px;
+  width: 40vw;
+  font-size: 1rem;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #4d97e4;
+  border-radius: 15px;
+  outline: none;
+  background: white;
+  transition: all 0s;
+  color: #4d97e4;
+}
+
+#search-value::placeholder {
+  color: #4d97e4;
+}
+
+#search-value:focus {
+  width: 41vw;
+  border-width: 3px;
+  border-color: rgb(77, 151, 228, 50%);
+}
+
+#search-value:focus::placeholder {
+  opacity: 0;
+}

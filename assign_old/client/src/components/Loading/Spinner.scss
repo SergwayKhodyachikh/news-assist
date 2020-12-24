@@ -1,0 +1,16 @@
+.spin {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  border-top: 5px solid #67F9ED;
+  border-bottom: 5px solid #67F9ED;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

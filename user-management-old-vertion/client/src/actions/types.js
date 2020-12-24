@@ -1,0 +1,15 @@
+export const CREATE_USER = 'CREATE_USER';
+export const FETCH_USERS = 'FETCH_USERS';
+export const EDIT_USER = 'EDIT_USER';
+export const FETCH_USER = 'FETCH_USER';
+export const SEARCH_USER = 'SEARCH_USER';
+export const DELETE_USER = 'DELETE_USER';
+export const CREATE_TASK = 'CREATE_TASK';
+export const FETCH_TASK = 'FETCH_TASK';
+export const FETCH_TASKS = 'FETCH_TASKS';
+export const EDIT_TASK = 'EDIT_TASK';
+export const DELETE_TASK = 'DELETE_TASK';
+export const CREATE_POST = 'CREATE_POST';
+export const EDIT_POST = 'EDIT_POST';
+export const FETCH_POST = 'FETCH_POST';
+export const DELETE_POST = 'DELETE_POST';

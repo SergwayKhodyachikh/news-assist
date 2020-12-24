@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+html {
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 22px;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.particles {
+  background-color: #96a8ac;
+  position: fixed;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4vh;
+  width: 8vw;
+  background-color: white;
+  border: 1px solid #4d97e4;
+  color: #4d97e4;
+  padding: 3px 20px;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: all 1s;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-long-text {
+  width: 160px;
+  font-size: 1rem;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: 0.8;
+  color: white;
+  background-color: #4d97e4;
+  border: none;
+}
+
+.btn-cancel {
+  background-color: white;
+  border: 1px solid silver;
+  color: silver;
+  transition: all 1s;
+}
+
+.btn-cancel:hover,
+.btn-cancel:active,
+.btn-cancel:focus {
+  background-color: silver;
+  color: white;
+}
+
+.btn-delete:hover .btn-delete:active,
+.btn-delete:focus {
+  background-color: #e44d4d;
+  color: gainsboro;
+}
+
+.btn-delete {
+  background-color: white;
+  border: 1px solid #e44d4d;
+  color: #e44d4d;
+}
+
+.btn-delete:hover {
+  background-color: #e44d4d;
+  color: white;
+}
+
+.btn-create-user {
+  position: fixed;
+  right: 21vw;
+  bottom: 10vh;
+  height: 5vh;
+  width: 5vh;
+  font-size: 2.5rem;
+  font-weight: 300;
+  padding: 0;
+  border-radius: 50%;
+}

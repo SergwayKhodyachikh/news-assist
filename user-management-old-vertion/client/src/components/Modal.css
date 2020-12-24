@@ -1,0 +1,26 @@
+.modal-background {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  z-index: +1;
+  margin: 0;
+  position: fixed;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+}
+
+.modal {
+  background: white;
+  width: 55vw;
+  height: 30vh;
+  border-radius: 5px;
+}
+
+.m-5 {
+  margin-right: 5vw;
+}

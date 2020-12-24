@@ -1,0 +1,24 @@
+.property {
+  font-weight: 400;
+}
+
+.sub-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1vh;
+}
+
+.editable-content {
+  transition: all 1s;
+  display: block;
+  cursor: pointer;
+  outline: none;
+}
+.editable-content:hover,
+.editable-content:active,
+.editable-content:focus {
+  transform: translateX(2%);
+  opacity: 0.6;
+  color: blue;
+}

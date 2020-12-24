@@ -1,0 +1,4 @@
+.body-width-limit {
+  max-width: 45vw;
+  overflow: auto;
+}

@@ -1,0 +1,264 @@
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  @media only screen and (max-width: 75em) {
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  } //1200px
+  @media only screen and (max-width: 56.25em) {
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  } //900px
+  @media only screen and (min-width: 112.5em) {
+    font-size: 75%; //1rem = 12, 12/16
+  } //1800
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: #777;
+
+  @media only screen and (max-width: 56.25em) {
+    padding: 0;
+  } //900px
+}
+
+::selection {
+  background-color: #55c57a;
+  color: #fff;
+}
+
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+
+  @media only screen and (max-width: 56.25em) {
+    font-size: 3rem;
+  } //900px
+
+  @media only screen and (max-width: 37.5em) {
+    font-size: 2.5rem;
+  } //600px
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(#000, 0.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 1.6rem;
+
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+  }
+
+  &--white {
+    background-color: #fff;
+    color: #777;
+
+    &::after {
+      background-color: #fff;
+    }
+  }
+
+  &--green {
+    background-color: #55c57a;
+    color: #fff;
+
+    &::after {
+      background-color: #55c57a;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: 8rem;
+
+    @media only screen and (max-width: 56.25em) {
+      margin-bottom: 6rem;
+    } //900px
+  }
+
+  @media only screen and (max-width: 56.25em) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  } //900px
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  [class^="col-"] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: 6rem;
+      @media only screen and (max-width: 56.25em) {
+        margin-right: 0;
+        margin-bottom: 6rem;
+      } //900px
+    }
+
+    @media only screen and (max-width: 56.25em) {
+      width: 100% !important;
+    } //900px
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - #{6rem}) / 2);
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{6rem}) / 3);
+  }
+
+  .col-2-of-3 {
+    width: calc(
+      2 * ((100% - 2 * #{6rem}) / 3) + #{6rem}
+    );
+  }
+
+  .col-1-of-4 {
+    width: calc((100% - 3 * #{6rem}) / 4);
+  }
+
+  .col-2-of-4 {
+    width: calc(
+      2 * ((100% - 3 * #{6rem}) / 4) + #{6rem}
+    );
+  }
+
+  .col-3-of-4 {
+    width: calc(
+      3 * ((100% - 3 * #{6rem}) / 4) + 2 * #{6rem}
+    );
+  }
+}
+
